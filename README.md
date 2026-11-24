@@ -1,8 +1,9 @@
-# Cynbit Smart Project Scoping Assistant
+# Cynbit Assessment Prototype — Smart Project Scoping Assistant
 
 > **A prototype improvement for [cynbit.in](https://www.cynbit.in)** — replacing the static 5-field contact form with an intelligent, guided project scoping assistant.
 
-## 🔗 Live Demo
+## 🔗 Repository
+`cynbit-assessment-prototype`
 
 **[→ View Live Prototype](https://cynbit-smart-intake.vercel.app)**
 
