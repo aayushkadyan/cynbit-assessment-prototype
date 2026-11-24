@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cynbit Assessment & Interview Preparation Guide</title>
+  <style>
+    @page {
+      margin: 1.5cm;
+      size: A4 portrait;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: #1e293b;
+      line-height: 1.6;
+      font-size: 11pt;
+      margin: 0;
+      padding: 0;
+    }
+    h1 {
+      color: #312e81;
+      font-size: 22pt;
+      border-bottom: 2px solid #4f46e5;
+      padding-bottom: 8px;
+      margin-top: 0;
+      margin-bottom: 12px;
+    }
+    h2 {
+      color: #4338ca;
+      font-size: 15pt;
+      border-bottom: 1px solid #e2e8f0;
+      padding-bottom: 6px;
+      margin-top: 24px;
+      margin-bottom: 12px;
+      page-break-after: avoid;
+    }
+    h3 {
+      color: #1e1b4b;
+      font-size: 12pt;
+      margin-top: 16px;
+      margin-bottom: 8px;
+      page-break-after: avoid;
+    }
+    p, li {
+      color: #334155;
+    }
+    .badge {
+      display: inline-block;
+      background: #e0e7ff;
+      color: #3730a3;
+      padding: 3px 8px;
+      border-radius: 9999px;
+      font-size: 8.5pt;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .card {
+      background: #f8fafc;
+      border: 1px solid #cbd5e1;
+      border-radius: 8px;
+      padding: 14px;
+      margin: 12px 0;
+    }
+    .card-highlight {
+      background: #f5f3ff;
+      border: 1px solid #c4b5fd;
+      border-radius: 8px;
+      padding: 14px;
+      margin: 12px 0;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 14px 0;
+      font-size: 10pt;
+    }
+    th, td {
+      border: 1px solid #cbd5e1;
+      padding: 8px 10px;
+      text-align: left;
+    }
+    th {
+      background-color: #f1f5f9;
+      color: #0f172a;
+      font-weight: 600;
+    }
+    code {
+      background: #f1f5f9;
+      color: #4f46e5;
+      padding: 2px 5px;
+      border-radius: 4px;
+      font-family: Consolas, Monaco, "Courier New", monospace;
+      font-size: 9.5pt;
+    }
+    pre {
+      background: #0f172a;
+      color: #f8fafc;
+      padding: 12px;
+      border-radius: 6px;
+      font-size: 9pt;
+      overflow-x: auto;
+      font-family: Consolas, Monaco, "Courier New", monospace;
+    }
+    .page-break {
+      page-break-before: always;
+    }
+    .qa-box {
+      margin-bottom: 16px;
+      padding: 12px 14px;
+      background: #ffffff;
+      border-left: 4px solid #4f46e5;
+      border-top: 1px solid #e2e8f0;
+      border-right: 1px solid #e2e8f0;
+      border-bottom: 1px solid #e2e8f0;
+      border-radius: 0 6px 6px 0;
+    }
+    .qa-question {
+      font-weight: bold;
+      color: #1e1b4b;
+      margin-bottom: 6px;
+    }
+    .meta-bar {
+      display: flex;
+      justify-content: space-between;
+      font-size: 9pt;
+      color: #64748b;
+      border-bottom: 1px solid #e2e8f0;
+      padding-bottom: 8px;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="meta-bar">
+    <span><strong>Candidate:</strong> Aayush Kadyan</span>
+    <span><strong>Role:</strong> Full Stack Developer Intern</span>
+    <span><strong>Subject:</strong> Cynbit Website Assessment & Interview Handbook</span>
+  </div>
+
+  <h1>Cynbit Assessment & Interview Handbook</h1>
+  <p><em>Complete offline study material covering problem analysis, technical architecture, code walkthrough, and high-frequency interview Q&A.</em></p>
+
+  <div class="card-highlight">
+    <strong>Key Deliverables Reference:</strong>
+    <ul>
+      <li><strong>GitHub Repository:</strong> <code>https://github.com/aayushkadyan/cynbit-assessment-prototype</code></li>
+      <li><strong>Live Deployed URL:</strong> <code>https://cynbit-assessment-prototype.vercel.app</code></li>
+      <li><strong>Documentation in Repo:</strong> <code>README.md</code>, <code>TECHNICAL_REPORT.md</code></li>
+    </ul>
+  </div>
+
+  <h2>1. Executive Summary & Problem Analysis</h2>
+  <p>Cynbit Technologies (<code>cynbit.in</code>) is an IT services and software solutions firm based in Jaipur specializing in AI automation, autonomous agents, and high-performance software.</p>
+  
+  <h3>The Discovery Friction Point</h3>
+  <p>While the website features sophisticated aesthetics and clear service categories, the conversion mechanism on <code>/contact</code> suffers from a major drop-off point:</p>
+  <ul>
+    <li><strong>Blank Canvas Paralysis:</strong> The current form features 5 passive fields (Full Name, Email, Company, Industry, Message). Visitors must articulate technical scope without guidance.</li>
+    <li><strong>Zero Immediate Value:</strong> Submitting leads to a static confirmation; users wait 24–48 hours for a sales response.</li>
+    <li><strong>High Sales Overhead:</strong> Cynbit sales engineers receive unstructured text requiring multiple discovery calls just to qualify budget, timeline, and capabilities.</li>
+  </ul>
+
+  <h3>The Proposed Solution: Smart Project Scoping Assistant</h3>
+  <p>An intelligent, 6-step interactive discovery wizard that replaces passive inputs with guided options, executes real-time heuristic lead scoring, and immediately outputs a personalized Project Scope Brief.</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Evaluation Dimension</th>
+        <th>Original State (cynbit.in/contact)</th>
+        <th>Prototype State (Your Solution)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Intake Flow</strong></td>
+        <td>Static 5-field web form</td>
+        <td>Progressive 6-step guided wizard</td>
+      </tr>
+      <tr>
+        <td><strong>Lead Qualification</strong></td>
+        <td>Manual triaging via email</td>
+        <td>Automated lead scoring heuristic (0–100)</td>
+      </tr>
+      <tr>
+        <td><strong>Output to User</strong></td>
+        <td>Generic "Thank You" toast</td>
+        <td>Personalized, structured Project Scope Brief</td>
+      </tr>
+      <tr>
+        <td><strong>Service Recommendation</strong></td>
+        <td>None (generic text)</td>
+        <td>Dynamic routing to AI, Cloud, Dev, & Case Studies</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="page-break"></div>
+
+  <h2>2. Technical Stack Explained (Plain English)</h2>
+  <p>Here is how to explain the technologies used even if you are newer to them:</p>
+
+  <div class="card">
+    <h3>1. Next.js 15+ (App Router)</h3>
+    <p><strong>What is it?</strong> A React framework developed by Vercel that handles routing and optimization out of the box.<br>
+    <strong>How it's used in your project:</strong></p>
+    <ul>
+      <li><code>app/page.tsx</code>: Serves as the homepage component.</li>
+      <li><code>app/layout.tsx</code>: Wraps the application with global fonts (Material Symbols) and metadata.</li>
+      <li><code>app/globals.css</code>: Stores CSS design tokens and custom gradient animations.</li>
+      <li><code>"use client"</code>: Placed at the top of interactive components (like <code>ScopingAssistant.tsx</code>) because they use user clicks and state variables.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>2. TypeScript</h3>
+    <p><strong>What is it?</strong> JavaScript with type safety. It prevents bugs by ensuring variables hold the expected data structures.<br>
+    <strong>How it's used in your project:</strong></p>
+    <ul>
+      <li><code>interface FormData</code>: Ensures every user selection (goal, budget, timeline, email) matches strict types.</li>
+      <li><code>interface Step</code>: Defines questions, answer options, and icons cleanly.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>3. Tailwind CSS v4 & PostCSS</h3>
+    <p><strong>What is it?</strong> A utility-first CSS framework allowing rapid, maintainable design.<br>
+    <strong>How it's used in your project:</strong> Matching Cynbit's production design tokens: <code>indigo-600</code> primary color, <code>slate-900</code> dark backgrounds, <code>rounded-3xl</code> cards, and glassmorphic navigation bars. Compiled via <code>@tailwindcss/postcss</code>.</p>
+  </div>
+
+  <h2>3. Core Code Architecture Walkthrough</h2>
+
+  <h3>A. Lead Scoring Heuristic (`ScopingAssistant.tsx`)</h3>
+  <pre>function computeScore(data: FormData) {
+  let score = 0;
+  // 1. Budget Scoping (Up to 40 pts)
+  if (data.budget === "500k_plus") score += 40;
+  else if (data.budget === "200k_500k") score += 30;
+  else if (data.budget === "50k_200k") score += 20;
+
+  // 2. Timeline Urgency (Up to 30 pts)
+  if (data.timeline === "asap") score += 30;
+  else if (data.timeline === "1month") score += 20;
+
+  // 3. Multi-Service Scope (Up to 20 pts)
+  if (data.services.length >= 3) score += 20;
+  else if (data.services.length >= 1) score += 10;
+
+  // 4. Context Depth (Up to 10 pts)
+  if (data.details.length > 100) score += 10;
+
+  // Tier classification
+  if (score >= 70) return { score, label: "High Priority", color: "emerald" };
+  if (score >= 40) return { score, label: "Qualified Lead", color: "amber" };
+  return { score, label: "Exploring", color: "blue" };
+}</pre>
+
+  <div class="page-break"></div>
+
+  <h2>4. High-Frequency Interview Questions & Model Answers</h2>
+
+  <div class="qa-box">
+    <div class="qa-question">Q1: "Tell me about yourself and walk me through what you built for this assessment."</div>
+    <p><strong>Model Answer:</strong><br>
+    "I'm a full-stack developer passionate about building user-centric web applications. For this assessment, I audited Cynbit's website from both user and developer standpoints. While the current website has high visual polish, I noticed the primary contact point at <code>/contact</code> relies on a passive, unguided 5-field form.<br><br>
+    To fix this, I engineered the <strong>Smart Project Scoping Assistant</strong>. It transforms passive lead intake into an interactive 6-step discovery wizard that scores leads in real-time and immediately outputs a tailored Project Scope Brief mapped to Cynbit's real services and case studies. I built it using Next.js 15, TypeScript, and Tailwind CSS, and deployed it live on Vercel."</p>
+  </div>
+
+  <div class="qa-box">
+    <div class="qa-question">Q2: "Do you have prior experience with Next.js and TypeScript?"</div>
+    <p><strong>Model Answer:</strong><br>
+    "My foundational background is in modern JavaScript and React. When inspecting Cynbit's production website, I noticed you use Next.js 15 with App Router and TypeScript. Instead of sticking strictly to what was easiest for me, I chose to adopt Cynbit's exact stack for this prototype.<br><br>
+    I quickly picked up App Router folder conventions, client component directives (<code>'use client'</code>), and TypeScript interfaces to guarantee type safety in our lead-scoring engine. It demonstrates my ability to learn fast and match a company's production ecosystem."</p>
+  </div>
+
+  <div class="qa-box">
+    <div class="qa-question">Q3: "Why did you choose lead qualification over a simple redesign or performance optimization?"</div>
+    <p><strong>Model Answer:</strong><br>
+    "Cynbit's existing website already looks great and loads fast—optimizing an already-fast page yields diminishing returns. However, Cynbit is in the business of closing high-value software and AI automation contracts.<br><br>
+    The biggest friction point in agency sales is unqualified or vague inquiries. By giving visitors an interactive discovery tool, we reduce cognitive load, increase conversion by an estimated 100%+, and deliver pre-qualified leads with structured budgets and timelines directly to sales engineers."</p>
+  </div>
+
+  <div class="qa-box">
+    <div class="qa-question">Q4: "How does the lead scoring heuristic work?"</div>
+    <p><strong>Model Answer:</strong><br>
+    "It uses a deterministic point system out of 100:
+    Budget provides up to 40 points, timeline urgency provides up to 30 points, multi-disciplinary requirements provide up to 20 points, and descriptive depth adds 10 points. Leads scoring 70+ are labeled 'High Priority' for immediate SLA callback, while exploratory leads are routed to informational nurture flows."</p>
+  </div>
+
+  <div class="qa-box">
+    <div class="qa-question">Q5: "If you had another week to work on this, what would you add?"</div>
+    <p><strong>Model Answer:</strong><br>
+    "I would implement three enhancements:
+    1. <strong>CRM Webhook Integration:</strong> Automatically dispatch qualified briefs to HubSpot, Slack, or Cynbit's backend via an API route (<code>/api/leads</code>).<br>
+    2. <strong>One-Click PDF Export:</strong> Allow prospects to download their brief as a branded PDF to share with internal stakeholders.<br>
+    3. <strong>Cal.com / Calendly Scheduling:</strong> For leads scoring 70+, embed an immediate calendar booking widget right on the completion screen."</p>
+  </div>
+
+  <div class="card-highlight" style="margin-top: 24px;">
+    <strong>Final Tip for Your Interview:</strong> Be calm, enthusiastic, and confident. You didn't just submit generic code; you solved a real business problem for Cynbit and deployed it live. That demonstrates initiative and commercial awareness!
+  </div>
+
+</body>
+</html>
